@@ -1,0 +1,57 @@
+# --- secrets ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+data/secret.key
+
+# --- application data ------------------------------------------------------
+data/app.db
+data/app.db-*
+data/uploads/*
+!data/uploads/.gitkeep
+data/artifacts/*
+data/exports/*
+data/*.db
+data/*.db-shm
+data/*.db-wal
+*.sqlite3
+
+# --- python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# --- node ------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/test-results/
+frontend/playwright-report/
+*.log
+npm-debug.log*
+
+# --- editors / OS ----------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- test artefacts --------------------------------------------------------
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# Local caches and generated files
+build/
+.next/
+CHANGELOG.md

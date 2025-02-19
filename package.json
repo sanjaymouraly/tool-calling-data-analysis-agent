@@ -1,0 +1,16 @@
+{
+  "name": "tool-using-data-analyst",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tool-Calling Data Analysis Agent - repository tooling (end-to-end tests and screenshot capture)",
+  "license": "MIT",
+  "scripts": {
+    "e2e": "playwright test",
+    "e2e:install": "playwright install chromium",
+    "screenshots": "node scripts/capture_screenshots.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0"
+  }
+}

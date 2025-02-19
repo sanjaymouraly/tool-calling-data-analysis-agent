@@ -1,0 +1,40 @@
+{
+  "retail_orders": {
+    "rows": 5018,
+    "revenue_total": 1657575.26,
+    "cost_total": 909634.5,
+    "profit_total": 747940.76,
+    "gross_margin_pct": 45.1226,
+    "average_order_value": 331.5151,
+    "distinct_orders": 5000,
+    "units_sold": 17678.0,
+    "monthly_periods": 24,
+    "first_month": "2023-01",
+    "last_month": "2024-12",
+    "last_month_revenue": 75139.04,
+    "previous_month_revenue": 61221.41,
+    "last_month_growth_pct": 22.7333,
+    "top_product": "Nimbus Office Chair",
+    "top_product_revenue": 400762.55,
+    "top_product_share_pct": 24.1776,
+    "duplicate_rows": 17,
+    "negative_revenue_rows": 3
+  },
+  "customers": {
+    "rows": 800,
+    "churned_rows": 73,
+    "churn_rate": 9.125,
+    "missing_region_rows": 24
+  },
+  "supplier_deliveries": {
+    "rows": 1200,
+    "comparable_deliveries": 1170,
+    "on_time_delivery_pct": 51.1966,
+    "worst_supplier": "Granite Timber",
+    "worst_supplier_on_time_pct": 46.4646,
+    "best_supplier": "Everest Metals",
+    "best_supplier_on_time_pct": 56.4767
+  },
+  "generated_with_seed": 20240517,
+  "note": "All demo data is synthetic. Values are computed from the CSVs in this directory and are used as the reference answers in the automated test-suite."
+}

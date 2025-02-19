@@ -1,0 +1,20 @@
+# Bandit configuration for the Tool-Calling Data Analysis Agent.
+#
+# B608 ("hardcoded SQL expressions") is skipped on purpose:
+#
+#   Every SQL statement in this project is assembled from a *trusted
+#   server-side template*.  Values are always passed as bound parameters
+#   ("?" placeholders) and identifiers are validated against the dataset's
+#   own column allow-list before they are quoted.  No model output and no
+#   user input is ever concatenated into the SQL text.
+#
+#   The security test-suite (backend/tests/test_security.py) asserts exactly
+#   that: a filter value such as "'; DROP TABLE datasets; --" is treated as
+#   a string, and a column name containing a quote is rejected.
+#
+#   Removing this skip should fail the build - that is the point.
+exclude_dirs:
+  - tests
+  - .venv
+skips:
+  - B608

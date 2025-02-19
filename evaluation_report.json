@@ -1,0 +1,292 @@
+{
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "provider": "free",
+  "dataset_hash": "16856f559dd958035371bbc2ba2bc5ba4418e3175af056b9a7e54f8a3b42b151",
+  "started_at": "2026-10-19T14:05:31Z",
+  "duration_ms": 483,
+  "notes": [
+    "Reference values are computed independently by the demo generator using pandas.",
+    "The free path proves the tool boundary and the arithmetic, not the accuracy of any hosted language model."
+  ],
+  "results": [
+    {
+      "id": "monthly-sales",
+      "question": "What were monthly sales and growth rates?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "time_series",
+        "generate_chart"
+      ],
+      "expected_tools": [
+        "time_series"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "last_period_value",
+          "expected": 75139.04,
+          "actual": 75139.04,
+          "tolerance": 0.01,
+          "ok": true
+        },
+        {
+          "metric": "last_period_growth",
+          "expected": 22.7333,
+          "actual": 22.7332725594,
+          "tolerance": 0.01,
+          "ok": true
+        },
+        {
+          "metric": "period_count",
+          "expected": 24,
+          "actual": 24,
+          "tolerance": 0,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 62,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "top-products",
+      "question": "Which products generated the highest revenue?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "rank_categories",
+        "generate_chart"
+      ],
+      "expected_tools": [
+        "rank_categories"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "top_value",
+          "expected": 400762.55,
+          "actual": 400762.55,
+          "tolerance": 0.01,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 40,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "average-order-value",
+      "question": "What is the average order value, and how was it calculated?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "expected_tools": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "kpi_value",
+          "expected": 331.5151,
+          "actual": 331.515052,
+          "tolerance": 0.001,
+          "ok": true
+        },
+        {
+          "metric": "detail::distinct_orders",
+          "expected": 5000,
+          "actual": 5000,
+          "tolerance": 0,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 44,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "total-revenue",
+      "question": "What was total revenue?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "expected_tools": [
+        "compute_kpi"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "kpi_value",
+          "expected": 1657575.26,
+          "actual": 1657575.26,
+          "tolerance": 0.01,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 39,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "data-quality",
+      "question": "Where are missing values, duplicated records, or unusual changes?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "detect_outliers",
+        "check_data_quality"
+      ],
+      "expected_tools": [
+        "check_data_quality",
+        "detect_outliers"
+      ],
+      "tools_match": true,
+      "values": [],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 49,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "period-comparison",
+      "question": "Compare regional performance this quarter versus last quarter.",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "compare_periods"
+      ],
+      "expected_tools": [
+        "compare_periods"
+      ],
+      "tools_match": true,
+      "values": [],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 40,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "supplier-on-time",
+      "question": "Which suppliers have the lowest on-time delivery percentage?",
+      "dataset": "supplier_deliveries",
+      "status": "pass",
+      "tools_used": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "expected_tools": [
+        "compute_kpi"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "group::Granite Timber",
+          "expected": 46.4646,
+          "actual": 46.464646464646464,
+          "tolerance": 0.01,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 42,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "churn-rate",
+      "question": "What is the churn rate among customers?",
+      "dataset": "customers",
+      "status": "pass",
+      "tools_used": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "expected_tools": [
+        "compute_kpi"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "kpi_value",
+          "expected": 9.125,
+          "actual": 9.125,
+          "tolerance": 0.01,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 37,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    },
+    {
+      "id": "units-sold",
+      "question": "How many units were sold in total?",
+      "dataset": "retail_orders",
+      "status": "pass",
+      "tools_used": [
+        "compute_kpi",
+        "explain_calculation"
+      ],
+      "expected_tools": [
+        "compute_kpi"
+      ],
+      "tools_match": true,
+      "values": [
+        {
+          "metric": "kpi_value",
+          "expected": 17678.0,
+          "actual": 17678.0,
+          "tolerance": 0.01,
+          "ok": true
+        }
+      ],
+      "values_match": true,
+      "citation_complete": true,
+      "latency_ms": 37,
+      "provider": "free",
+      "model": "deterministic-rule-engine",
+      "estimated_cost_usd": 0.0,
+      "error": null
+    }
+  ]
+}

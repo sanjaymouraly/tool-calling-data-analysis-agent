@@ -1,0 +1,32 @@
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+exclude = [".venv", "__pycache__", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM", "RUF"]
+ignore = [
+  "E501",    # long lines are handled by the formatter
+  "B008",    # FastAPI dependencies
+  "RUF001",  # ambiguous unicode characters
+  "SIM108",  # ternary instead of if-else (readability)
+  "B904",    # raise without from inside except
+  "UP038",   # isinstance(x, (A, B)) is perfectly readable
+  "RUF012",  # SQLAlchemy declarative models need plain class attributes
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "B011"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+ignore_missing_imports = true
+no_strict_optional = true
+check_untyped_defs = false
+disallow_untyped_defs = false
